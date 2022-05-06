@@ -2,7 +2,7 @@
 
 function copyTextFunc() {
 
-    alert("Copied the text: ");
+
     var copyText = document.getElementById("link");
 
 

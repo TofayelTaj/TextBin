@@ -31,8 +31,10 @@ public class PastController {
 
         Timer timer = new Timer();
         DeletePastTask task = new DeletePastTask();
-      
-        timer.schedule( task , past.getTimeOutInMin() * 6000);
+        task.setPast(past);
+        task.setPastRepository(pastRepository);
+
+        timer.schedule( task , past.getTimeOutInMin() * 60000);
 
         pastRepository.save(past);
 
